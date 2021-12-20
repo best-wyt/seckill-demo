@@ -24,7 +24,7 @@ spring:
   # 数据源配置
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/seckill?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/seckill_demo?useUnicode=true&characterEncoding=UTF-8&serverTimezone=Asia/Shanghai
     username: root
     password: 55555wyt
     hikari:
@@ -48,7 +48,7 @@ spring:
   # redis配置
   redis:
     #服务器地址
-    host: 192.168.10.100
+    host: 82.156.190.81
     #端口
     port: 6379
     #数据库
@@ -56,7 +56,7 @@ spring:
     #超时时间
     timeout: 10000ms
     #密码
-    password: root
+#    password: root
     lettuce:
       pool:
         #最大连接数，默认8
@@ -70,11 +70,11 @@ spring:
   # RabbitMQ
   rabbitmq:
     # 服务器
-    host: 192.168.10.101
+    host: 82.156.190.81
     #用户名
-    username: guest
+    username: admin
     #密码
-    password: guest
+    password: admin
     # 虚拟主机
     virtual-host: /
     #端口
@@ -117,3 +117,10 @@ mybatis-plus:
 logging:
   level:
     com.xxxx.seckill.mapper: debug
+  file:
+    path: ./log/
+    max-size: 100MB
+    max-history: 7
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){faint} %clr(%5p) - %clr([%t]){faint} %X{log_id} %clr(%logger{39}){cyan} %clr(:){faint} %m%n%wEx"
+    file: "%d{yyyy-MM-dd HH:mm:ss.SSS} %5p - [%t] %X{log_id} %logger{39} : %m%n%wEx"

@@ -1,3 +1,4 @@
+/*
 package com.xxxx.seckill.controller;
 
 
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+*/
 /**
  * <p>
  * 前端控制器
@@ -20,7 +22,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * 答疑老师微信：lezijie
  *
  * @author zhoubin
- */
+ *//*
+
 @Controller
 @RequestMapping("/order")
 public class OrderController {
@@ -28,7 +31,8 @@ public class OrderController {
 	@Autowired
 	private IOrderService orderService;
 
-	/**
+	*/
+/**
 	 * 功能描述: 订单详情
 	 *
 	 * @param:
@@ -36,7 +40,8 @@ public class OrderController {
 	 * 答疑老师微信：lezijie
 	 * @since: 1.0.0
 	 * @Author:zhoubin
-	 */
+	 *//*
+
 	@RequestMapping("/detail")
 	@ResponseBody
 	public RespBean detail(User user, Long orderId) {
@@ -48,3 +53,4 @@ public class OrderController {
 	}
 
 }
+*/

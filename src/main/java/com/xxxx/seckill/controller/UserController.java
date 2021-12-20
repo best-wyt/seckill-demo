@@ -2,9 +2,7 @@ package com.xxxx.seckill.controller;
 
 
 import com.xxxx.seckill.pojo.User;
-import com.xxxx.seckill.rabbitmq.MQSender;
 import com.xxxx.seckill.vo.RespBean;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -23,8 +21,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/user")
 public class UserController {
 
-	@Autowired
-	private MQSender mqSender;
+	// @Autowired
+	// private MQSender mqSender;
 
 	/**
 	 * 功能描述: 用户信息(测试)
